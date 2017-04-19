@@ -1,27 +1,25 @@
 (function(global) {
+	var customProparty;
+	function getCustomProparty() {
+		return customProparty;
+	}
 
 	global.setPrimitive = function (obj, val) {
-		obj.primitive = val;	
-		obj.valueOf = function() {
-			return val;
-		}
+		customProparty = val;	
+		obj.valueOf = getCustomProparty;
 	}
 
 	global.changePrimitive = function(obj, val) {
-		if("primitive" in obj) {
-			obj.primitive = val;	
-			obj.valueOf = function() {
-				return val;
-			}	
-		}
-		
+		customProparty = val;
 	}
 
 })(this);
 
-var obj = new Object();
+var obj = {};
 setPrimitive(obj, "ttt");
-conseole.log(obj.valueOf);//ttt
+console.log(obj.valueOf()); //ttt
 
 changePrimitive(obj, "sss");
-conseole.log(obj.valueOf);//sss
+console.log(obj.valueOf()); //sss
+
+

@@ -1,6 +1,10 @@
 var hsvtorgb;
 
 hsvtorgb = function(h, s, v) {
+	function format(r, g, b) {
+		return "rgb(" + Math.round(r * 255) + "," + Math.round(g * 255) + "," + Math.round(b * 255) + ")";
+	}
+
 	var i,
 		f,
 		p,
@@ -19,10 +23,7 @@ hsvtorgb = function(h, s, v) {
 	q = v * (1 - s * f);
 	t = v * (1 - s * (1 - f));
 
-	function format(r, g, b) {
-		return "rgb(" + Math.round(r * 255) + "," + Math.round(g * 255) + "," + Math.round(b * 255) + ")";
-	}
-
+	
 	switch(i) {
 		case 0:
 			r = v;
