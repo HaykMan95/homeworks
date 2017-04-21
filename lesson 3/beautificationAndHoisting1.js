@@ -23,7 +23,7 @@ hsvtorgb = function(h, s, v) {
 	q = v * (1 - s * f);
 	t = v * (1 - s * (1 - f));
 
-	
+
 	switch(i) {
 		case 0:
 			r = v;

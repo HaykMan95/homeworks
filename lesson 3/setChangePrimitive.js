@@ -5,7 +5,7 @@
 	}
 
 	global.setPrimitive = function (obj, val) {
-		customProparty = val;	
+		customProparty = val;
 		obj.valueOf = getCustomProparty;
 	}
 
