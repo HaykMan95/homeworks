@@ -42,3 +42,8 @@ function matrixIndexOf(matrix, num) {
 	}
 	return -1;
 }
+
+function lastIndexOf(arr, num) {
+	var index = getIndex(arr.reverse(), num);
+	return index === -1 ? -1 : index + arr.length - 1;
+}
