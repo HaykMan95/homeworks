@@ -47,3 +47,14 @@ function lastIndexOf(arr, num) {
 	var index = getIndex(arr.reverse(), num);
 	return index === -1 ? -1 : index + arr.length - 1;
 }
+
+
+function matrixLastIndexOf(matrix, num) {
+	for(var i = 0; i < matrix.length; ++i) {
+		var index = lastIndexOf(matrix[i], num);
+		if(index !== -1) {
+			return i + "--" + index
+		}
+	}
+	return -1;
+}
