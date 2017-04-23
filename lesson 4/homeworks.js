@@ -47,20 +47,19 @@ function matrixIndexOf(matrix, num) {
 
 //5)
 function lastIndexOf(arr, num) {
-	var lastIndex = -1;
 	if(arr.length >0 && typeof(num) === "number") {
-		for(i = 0; i < arr.length; i++) {
+		for(i = arr.length - 1; i >=0; i--) {
 			if(arr[i] === num) {
-				lastIndex = i;
+				return i;
 			}
 		}
 	}
-	return lastIndex;
+	return -1;
 }
 
 //6)
 function matrixLastIndexOf(matrix, num) {
-	for(var i = matrix.length - 1; i = 0; ++i) {
+	for(var i = matrix.length - 1; i >= 0; --i) {
 		var index = lastIndexOf(matrix[i], num);
 		if(index !== -1) {
 			return i + "--" + index
