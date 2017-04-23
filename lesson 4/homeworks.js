@@ -5,7 +5,7 @@ function getIndex(arr, num) {
 			if(arr[i] === num) {
 				return i;
 			}
-			//arr[i] === num ?? return i : countinue;   // ????
+			//arr[i] === num ? return i : countinue;   // ????
 		}
 	}
 	return -1;
@@ -47,14 +47,8 @@ function matrixIndexOf(matrix, num) {
 
 //5)
 function lastIndexOf(arr, num) {
-	if(arr.length >0 && typeof(num) === "number") {
-		for(i = arr.length - 1; i >=0; i--) {
-			if(arr[i] === num) {
-				return i;
-			}
-		}
-	}
-	return -1;
+	var index = getIndex(arr.reverse(), num);
+	return index === -1 ? -1 : arr.length - 1 - index;
 }
 
 //6)
