@@ -54,7 +54,7 @@ function lastIndexOf(arr, num) {
 
 //6)
 function matrixLastIndexOf(matrix, num) {
-	for(var i = 0; i < matrix.length; ++i) {
+	for(var i = matrix.length - 1; i = 0; ++i) {
 		var index = lastIndexOf(matrix[i], num);
 		if(index !== -1) {
 			return i + "--" + index
