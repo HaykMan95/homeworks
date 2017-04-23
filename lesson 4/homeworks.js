@@ -23,7 +23,6 @@ function getRandomInt(maxInt) {
 function getRandomMatrix(n, m) {
 	if(typeof(n) === "number" && typeof(m) === "number") {
 		var matrix = [];
-		var randIn;
 		for(var i = 0; i < n; ++i) {
 			matrix[i] = [];
 			for(var j = 0; j < m; ++j) {
@@ -48,8 +47,15 @@ function matrixIndexOf(matrix, num) {
 
 //5)
 function lastIndexOf(arr, num) {
-	var index = getIndex(arr.reverse(), num);
-	return index === -1 ? -1 : index + arr.length - 1;
+	var lastIndex = -1;
+	if(arr.length >0 && typeof(num) === "number") {
+		for(i = 0; i < arr.length; i++) {
+			if(arr[i] === num) {
+				lastIndex = i;
+			}
+		}
+	}
+	return -lastIndex;
 }
 
 //6)
