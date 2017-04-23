@@ -1,3 +1,4 @@
+//1)
 function getIndex(arr, num) {
 	if(arr.length >0 && typeof(num) === "number") {
 		for(i = 0; i < arr.length; i++) {
@@ -10,6 +11,7 @@ function getIndex(arr, num) {
 	return -1;
 }
 
+//2)
 function getRandomInt(maxInt) {
 	if(typeof(maxInt) === "number") {
 		return parseInt(String(Math.random() * (maxInt - 0) + 0));
@@ -17,6 +19,7 @@ function getRandomInt(maxInt) {
 	throw "Error";
 }
 
+//3)
 function getRandomMatrix(n, m) {
 	if(typeof(n) === "number" && typeof(m) === "number") {
 		var matrix = [];
@@ -32,7 +35,7 @@ function getRandomMatrix(n, m) {
 	throw "Error";
 }
 
-
+//4)
 function matrixIndexOf(matrix, num) {
 	for(var i = 0; i < matrix.length; ++i) {
 		var index = getIndex(matrix[i], num);
@@ -43,12 +46,13 @@ function matrixIndexOf(matrix, num) {
 	return -1;
 }
 
+//5)
 function lastIndexOf(arr, num) {
 	var index = getIndex(arr.reverse(), num);
 	return index === -1 ? -1 : index + arr.length - 1;
 }
 
-
+//6)
 function matrixLastIndexOf(matrix, num) {
 	for(var i = 0; i < matrix.length; ++i) {
 		var index = lastIndexOf(matrix[i], num);
