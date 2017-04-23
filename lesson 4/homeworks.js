@@ -55,7 +55,7 @@ function lastIndexOf(arr, num) {
 			}
 		}
 	}
-	return -lastIndex;
+	return lastIndex;
 }
 
 //6)
