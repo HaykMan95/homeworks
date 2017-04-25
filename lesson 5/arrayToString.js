@@ -18,7 +18,7 @@ function arrayToString(arr, func) {
 }
 
 function toString(val) {
-	return val*val;
+	return +val;
 }
 var ar = [1,2,3,4];
 arrayToString(ar, toString)
