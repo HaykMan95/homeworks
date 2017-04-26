@@ -8,6 +8,6 @@ var instacne = function instanceOf(arg, type) {
 	}
 }
 
-var instacne = function instanceOf(arg) {
+function getClassName(arg) {
 	return toString.call(arg).slice(8,-1)
 }
