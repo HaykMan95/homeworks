@@ -5,7 +5,6 @@ function getIndex(arr, num) {
 			if(arr[i] === num) {
 				return i;
 			}
-			//arr[i] === num ? return i : countinue;   // ????
 		}
 	}
 	return -1;
