@@ -6,6 +6,6 @@
     };
 
     function getHexNumber(count) {
-        return Math.random().toString(16).slice(2,count + 2);
+        return Math.random().toString(16).slice(2, count + 2);
     }
 }());
