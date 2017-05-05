@@ -65,9 +65,14 @@
         return cmp("==", this, range);
     }
 
-    that.namespace.Range.prototype.compare = function(range) {
+    that.namespace.Range.prototype.compare = function(range, func) {
         // return cmp(">", this, range)? 1: cmp("<", this, range)? -1: 0 ;
-        return + cmp(">", this, range) - cmp("<", this, range) + 0;
+        if (arguments.length === 1) {
+            return + cmp(">", this, range) - cmp("<", this, range) + 0;
+        } else {
+            return + func(this, range);
+        }
+        
     }
 
 
