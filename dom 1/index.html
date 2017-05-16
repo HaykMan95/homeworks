@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Our first project</title>
+    </head>
+    <body>
+        <h1>My todo list</h1>
+        <input id="new-task" type="text" name="fname" onkeyup="render(this.value)">
+        <button onclick="addItem()">Add</button>
+        <ul id="todo-list">
+        </ul>
+        <div>
+            All tasks:<span id="all-task"> 0 </span> Completed:<span id="complited-task"> 0 </span>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
