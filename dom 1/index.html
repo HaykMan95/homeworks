@@ -8,7 +8,7 @@
         <h1>My todo list</h1>
         <input id="new-task" type="text" name="fname" onkeyup="render(this.value)">
         <button onclick="addItem()">Add</button>
-        <ul id="todo-list">
+        <ul id="todo-list" onclick="editTodo(event)">
         </ul>
         <div>
             All tasks:<span id="all-task"> 0 </span> Completed:<span id="complited-task"> 0 </span>

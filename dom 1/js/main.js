@@ -4,9 +4,9 @@ function renderViewById (id, items) {
     console.log(items);
     var listHTML = '';
     items.forEach(function (item) {
-        listHTML += ('<li><input type="checkbox" name="vehicle" value="Bike"'
-         + (item.completed ? 'checked' : '')   +' onclick="coplited('+ item.id +')">'
-         + '<span style="' + (item.completed ? 'text-decoration:line-through' : '')  + '" >' + item.title + '</span> <a href="#" onclick="deleteItem('+ item.id +')">X</a></li>');
+        listHTML += ('<li to-do-id="' + item.id + '" ><input type="checkbox" name="vehicle" value="Bike"'
+         + (item.completed ? 'checked' : '')   +' >'
+         + '<span style="' + (item.completed ? 'text-decoration:line-through' : '')  + '" >' + item.title + '</span> <a href="#" >X</a></li>');
     });
 
     document.getElementById(id).innerHTML = listHTML;
@@ -94,4 +94,13 @@ function render(title) {
     renderViewById("todo-list", items);
     document.getElementById('all-task').innerHTML = items.length;
     document.getElementById('complited-task').innerHTML = toDoList.getComplitedCount(title);
+}
+
+function editTodo(ev) {
+    if(ev.target.tagName === "INPUT") {
+        coplited(ev.target.parentElement.attributes[0].value);
+    }
+    if(ev.target.tagName === "A") {
+        deleteItem(ev.target.parentElement.attributes[0].value);
+    }
 }
